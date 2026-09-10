@@ -1,0 +1,36 @@
+.home {
+  min-height: 100vh;
+  background: #181a1c;
+  color: white;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #181a1c;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-profile {
+  color: white;
+}
