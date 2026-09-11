@@ -4,33 +4,164 @@
   color: white;
 }
 
-.navbar {
+body {
+  background-color: #181a1c;
+  color: white;
+}
+
+.movie-section {
+  padding: 30px;
+}
+
+movie-section h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.movie-container {
+  position: relative;
+}
+
+.movie-list {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.movie-list::-webkit-scrollbar {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+
+  background-color: rgba(40, 40, 40, 0.9);
+  color: white;
+
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.movie-card {
+  position: relative;
+  flex: 0 0 150px;
+}
+
+.movie-card img {
   width: 100%;
-  padding: 20px 40px;
+  display: block;
+  border-radius: 8px;
+}
 
+.movie-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  border-radius: 0 8px 0 8px;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.top-ten {
+  background-color: red;
+}
+
+.new-episode {
+  top: 12px;
+  left: 12px;
+  right: auto;
+  border-radius: 20px;
+  background-color: #2737a8;
+}
+
+.movie-card p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Navbar */
+.navbar {
+  height: 64px;
+  padding: 0 30px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-
-  background: #181a1c;
+  background-color: #181a1c;
 }
 
-.navbar-left {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+.navbar-logo {
+  font-size: 24px;
+  font-weight: 700;
 }
 
-.navbar nav {
+.navbar-menu {
   display: flex;
   gap: 24px;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-}
-
+.navbar-menu a,
 .navbar-profile {
   color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 450px;
+  padding: 60px 30px;
+
+  display: flex;
+  align-items: center;
+
+  background-image: url("../assets/images/film1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.hero-action {
+  display: flex;
+  gap: 10px;
+}
+
+.hero-action button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
