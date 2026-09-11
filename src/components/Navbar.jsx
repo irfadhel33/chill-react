@@ -5,14 +5,14 @@ import avatar from "../assets/images/avatar.png";
 function Navbar() {
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar-logo" aria-label="Chill beranda">
+      <Link to="/home" className="navbar-logo" aria-label="Chill beranda">
         <img src={chillLogo} alt="CHILL" />
       </Link>
 
       <div className="navbar-menu">
-        <Link to="/">Series</Link>
-        <Link to="/">Film</Link>
-        <Link to="/">Daftar Saya</Link>
+        <Link to="/home">Series</Link>
+        <Link to="/home">Film</Link>
+        <Link to="/home">Daftar Saya</Link>
       </div>
 
       <Link to="/login" className="navbar-profile" aria-label="Buka profil">

@@ -30,7 +30,7 @@ function handleSubmit(event) {
   }
 
   setError("");
-  navigate("/");
+  navigate("/home");
 }
 
   return (
