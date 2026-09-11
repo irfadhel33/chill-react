@@ -6,7 +6,7 @@ import "./styles/LogReg.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/chill-react">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
