@@ -2,45 +2,46 @@ import { useRef } from "react";
 import MovieCard from "./MovieCard";
 import "../styles/Home.css"
 
-function MovieSection({ title, movies }) {
+function MovieSection({ title, movies, variant = "portrait" }) {
   const movieListRef = useRef(null);
 
-  function scrolLeft() {
-    movieListRef.current.scrollBy({
-      left: -500,
+  function scrollLeft() {
+    movieListRef.current?.scrollBy({
+      left: -420,
       behavior: "smooth",
     });
   }
 
   function scrollRight() {
-    movieListRef.current.scrollBy({
-      left: 500,
+    movieListRef.current?.scrollBy({
+      left: 420,
       behavior: "smooth",
     });
   }
   return (
     <section className="movie-section">
-      <h2>{title}</h2>
+      <h2 className="movie-section-title">{title}</h2>
 
       <div className="movie-container">
-        <button className="arrow left" onClick={scrolLeft}>
-          ←
+        <button className="arrow arrow--left" type="button" onClick={scrollLeft} aria-label={`Geser ${title} ke kiri`}>
+          <span aria-hidden="true">‹</span>
         </button>
 
         <div className="movie-list" ref={movieListRef}>
           {movies.map((movie) => (
             <MovieCard
-              key={movie.title}
+              key={`${title}-${movie.title}`}
               image={movie.image}
               title={movie.title}
-              alt={movie.title}
               badge={movie.badge}
+              rating={movie.rating}
+              variant={variant}
             />
           ))}
         </div>
 
-        <button className="arrow right" onClick={scrollRight}>
-          →
+        <button className="arrow arrow--right" type="button" onClick={scrollRight} aria-label={`Geser ${title} ke kanan`}>
+          <span aria-hidden="true">›</span>
         </button>
       </div>
     </section>

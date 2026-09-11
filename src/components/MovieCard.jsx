@@ -1,16 +1,22 @@
-function MovieCard({ image, title, alt, badge }) {
-    return(
-        <div className="movie-card">
-            <img src={image} alt={alt} />
-            <p>{title}</p>
+function MovieCard({ image, title, badge, rating, variant = "portrait" }) {
+  return (
+    <article className={`movie-card movie-card--${variant}`}>
+      <img src={image} alt={title} />
 
-            {badge && (
-            <span className={`movie-badge ${badge.type}`}>
-                {badge.text}
-            </span>
-            )}
+      {badge && (
+        <span className={`movie-badge movie-badge--${badge.type}`}>
+          {badge.text}
+        </span>
+      )}
+
+      {variant === "landscape" ? (
+        <div className="movie-card-info">
+          <p>{title}</p>
+          <span>★ {rating}/5</span>
         </div>
-    );
+      ) : null}
+    </article>
+  );
 }
 
 export default MovieCard;

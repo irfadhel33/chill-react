@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap");
 
-/* =========================
-   RESET
-========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -13,11 +9,6 @@
 body {
   font-family: "Lato", sans-serif;
 }
-
-
-/* =========================
-   AUTH PAGE
-========================= */
 
 .login-bg {
   min-height: 100vh;
@@ -34,11 +25,6 @@ body {
   background-repeat: no-repeat;
 }
 
-
-/* =========================
-   AUTH CARD
-========================= */
-
 .login-bg main {
   width: 100%;
   max-width: 306px;
@@ -49,11 +35,6 @@ body {
 
   background-color: rgba(24, 26, 28, 0.84);
 }
-
-
-/* =========================
-   LOGO
-========================= */
 
 .top-container {
   display: flex;
@@ -73,11 +54,6 @@ body {
   width: auto;
   height: 24px;
 }
-
-
-/* =========================
-   WELCOME
-========================= */
 
 .welcome-message {
   display: flex;
@@ -100,11 +76,6 @@ body {
 .welcome-message p {
   font-size: 10px;
 }
-
-
-/* =========================
-   FORM
-========================= */
 
 form {
   width: 100%;
@@ -188,9 +159,6 @@ form {
   font-size: 12px;
   margin: 4px 0px 6px 4px;
 }
-/* =========================
-   LOGIN / REGISTER ACTION
-========================= */
 
 .relog-action {
   display: flex;
@@ -218,11 +186,6 @@ form {
   text-decoration: underline;
 }
 
-
-/* =========================
-   BUTTON AREA
-========================= */
-
 .login-button {
   display: flex;
   flex-direction: column;
@@ -243,11 +206,6 @@ form {
   line-height: 140%;
   letter-spacing: 0.2px;
 }
-
-
-/* =========================
-   MAIN BUTTON
-========================= */
 
 .login {
   width: 100%;
@@ -280,11 +238,6 @@ form {
 .login:hover {
   background-color: rgb(80, 93, 95);
 }
-
-
-/* =========================
-   GOOGLE BUTTON
-========================= */
 
 .google-login {
   width: 100%;
@@ -321,11 +274,6 @@ form {
 .google-login img {
   width: 10px;
 }
-
-
-/* =========================
-   DESKTOP
-========================= */
 
 @media screen and (min-width: 1024px) {
 

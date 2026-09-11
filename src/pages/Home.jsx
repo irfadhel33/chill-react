@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import "../styles/Home.css";
 
 import MovieSection from "../components/MovieSection";
+import Footer from "../components/Footer";
 // import MovieCard from "../components/MovieCard";
 // import film1 from "../assets/images/film1.png";
 import film2 from "../assets/images/film2.png";
@@ -27,18 +28,22 @@ function Home() {
     {
       image: film2,
       title: "Don't Look Up",
+      rating: "4.5",
     },
     {
       image: film3,
       title: "All Of Us Are Dead",
+      rating: "4.2",
     },
     {
       image: film4,
       title: "Blue Lock",
+      rating: "4.6",
     },
     {
       image: film5,
       title: "A Man Called Otto",
+      rating: "4.4",
     },
     {
       image: film6,
@@ -123,19 +128,33 @@ function Home() {
     },
   ];
 
-  // const resume = movies.slice(0, 2);
   const resume = movies.slice(0, 4);
   const topRating = movies.slice(4, 9);
   const trending = movies.slice(9, 14);
-  const newRelease = [movies[13], movies[14], movies[9], movies[8], movies[15]];
+  const newRelease = [movies[13], movies[14], movies[8], movies[7], movies[15]];
   return (
     <div className="home">
       <Navbar />
       <Hero />
-      <MovieSection title="Melanjutkan Nonton" movies={resume} />
-      <MovieSection title="Top Rating" movies={topRating} />
-      <MovieSection title="Trending" movies={trending} />
-      <MovieSection title="New Release" movies={newRelease} />
+      <MovieSection 
+        title="Melanjutkan Nonton" 
+        movies={resume} 
+        variant="landscape" 
+      />
+
+      <MovieSection 
+        title="Top Rating" 
+        movies={topRating} 
+      />
+      <MovieSection 
+        title="Trending" 
+        movies={trending} 
+      />
+      <MovieSection 
+        title="New Release" 
+        movies={newRelease} 
+      />
+      <Footer />
     </div>
   );
 }
